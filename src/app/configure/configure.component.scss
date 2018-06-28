@@ -1,0 +1,100 @@
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+
+.content
+{
+	padding: 50px 0px;
+}
+
+h1.title 
+{
+	font-size: 1em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.algorithm-wrapper
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.model-selected
+{
+	display: flex;
+	justify-content: center;
+
+	.editable 
+	{
+		outline: none;
+		background: $primary-color;
+		font: $text;
+		padding: 15px 30px;
+		border-radius: 10px;
+		background: rgba(0,0,0,.05);
+		cursor: pointer;
+		border: 2px solid transparent;
+		transition: .5s ease;
+
+		b 
+		{
+			text-transform: uppercase;
+			font-size: .8em;
+			margin-right: 20px;
+		}
+
+		.fas 
+		{
+			margin-left: 20px;
+			color: rgba(0,0,0,.3);
+		}
+
+		.fas:hover
+		{
+			color: $primary-color;
+		}
+	}
+}
+
+.button-wrap
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+button
+{
+	background: $primary-color;
+	padding: 15px 20px;
+	border-radius: 5px;
+	font-weight: 400;
+	color: #FFF;
+	border: 0px;
+	outline: none;
+	width: 150px;
+	font-size: 1em;
+	margin: 0px auto;
+	transition: .5s ease;
+	cursor: pointer;
+
+	.fas 
+	{
+		margin-right: 5px;
+	}
+}
+
+button:hover
+{
+	background: $light-primary;
+}

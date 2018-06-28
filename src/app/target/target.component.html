@@ -1,0 +1,30 @@
+<div class="content">
+	<h1 class="title">Target Customers</h1>	
+	<h2 class="subtitle">Mass Media</h2>
+	<div class="target-card-wrapper">
+		<app-target-card (click)="mediaClick()" *ngFor="let mode of massMedia" [mode]="mode"></app-target-card>
+	</div>
+	<h2 class="subtitle">Online</h2>
+	<div class="target-card-wrapper">
+		<app-target-card (click)="onlineClick()" *ngFor="let mode of online" [mode]="mode"></app-target-card>
+	</div>
+	<h2 class="subtitle">Mobile</h2>
+	<div class="target-card-wrapper">
+		<app-target-card (click)="mobileClick()" *ngFor="let mode of mobile" [mode]="mode"></app-target-card>
+	</div>
+	<h2 class="subtitle">Offline</h2>
+	<div class="target-card-wrapper">
+		<app-target-card (click)="offlineClick()" *ngFor="let mode of offline" [mode]="mode"></app-target-card>
+	</div>
+</div>
+<footer>
+	<div class="parameters">
+		<b>Price: </b>${{price}}
+	</div>
+	<div class="parameters">
+		<b>Suitable for campaign: </b>{{customers}} customers
+	</div>
+	<div class="parameters">
+		<button [routerLink]="['../orders']" [queryParams]="{price:price, customers: customers, model:model}"><i class="fas fa-play-circle"></i> Order</button>
+	</div>
+</footer>

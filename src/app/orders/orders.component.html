@@ -1,0 +1,22 @@
+<div class="content">
+
+<div class="pay" *ngIf="price">
+	<div class="payment-card">
+		<div class="payment-details">
+			<div class="model-title">{{model}} Campaign</div>
+			<p>Services include customer acquisition and targetting using TV, Radio, Newspaper, Facebook, Google Ads, Coupons.</p>
+			<p class="customers">Customers targetted <b>{{customers}}</b></p>
+		</div>
+		<div class="amount">${{price}}</div>
+	</div>
+	<div class="total-wrapper">Total: ${{price}}</div>
+	<div class="button-wrap">
+		<button routerLink="../payment"><i class="fas fa-credit-card"></i> Make Payment</button>
+	</div>
+</div>
+
+<div class="empty" *ngIf="!price">
+	No new orders in cart.
+</div>
+
+</div>

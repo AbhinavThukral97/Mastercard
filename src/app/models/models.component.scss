@@ -1,0 +1,62 @@
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+
+.models-wrapper
+{
+	color: $text;
+}
+
+.model-cards-wrapper
+{
+	margin-top: 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.model-card
+	{
+		width: 150px;
+		height: 150px;
+		background: #FFF;
+		padding: 20px;
+		border-radius: 25px;
+		border: 2px solid transparent;
+		margin: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		cursor: pointer;
+		transition: .5s ease;
+		outline: none;
+
+		.fas 
+		{
+			color: #DDD;
+			text-align: center;
+			margin: 5px;
+			transition: .5s ease;
+		}
+
+		.model-title 
+		{
+			font-size: 1.1em;
+			width: 100%;
+			font-weight: 400;
+			text-align: center;
+		}
+	}
+
+	.model-card:hover
+	{
+		border: 2px solid #ffbaae;
+	}
+
+	.model-card:hover>.fas
+	{
+		color: $primary-color;
+	}
+}

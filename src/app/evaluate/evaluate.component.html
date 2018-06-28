@@ -1,0 +1,11 @@
+<div class="content">
+	<div class="wrapper">
+		<div class="evaluate-card" *ngFor="let card of cards">
+			<div class="model-details">
+				<div class="model-title">{{card.name}}</div>
+				<p>{{card.text}}</p>
+			</div>
+			<div class="status {{card.status}}">{{card.status}}</div>
+		</div>
+	</div>
+</div>

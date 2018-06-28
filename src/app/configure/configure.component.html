@@ -1,0 +1,14 @@
+<div class="config-wrapper">
+	<div class="content">
+		<div class="model-selected">
+			<div class="editable" routerLink="../models"><b>Model</b> {{model}} <i class="fas fa-pen"></i></div>
+		</div>
+		<h1 class="title">Select an algorithm</h1>
+		<div class="algorithm-wrapper">
+			<app-algorithm-card *ngFor="let algo of algorithms" [algo]="algo"></app-algorithm-card>
+		</div>
+		<div class="button-wrap">
+			<button [routerLink]="['../performance']" [queryParams]="{model:model}"><i class="fas fa-check-circle"></i> Done</button>
+		</div>
+	</div>
+</div>

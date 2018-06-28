@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming';
+$candy-app-primary: mat-palette($mat-indigo);
+$candy-app-accent:  mat-palette($mat-red, A200, A100, A400);
+
+$candy-app-warn:    mat-palette($mat-red);
+
+$candy-app-theme: mat-light-theme($candy-app-primary, $candy-app-accent, $candy-app-warn);
+
+@include angular-material-theme($candy-app-theme);
+
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+
+$background: #EEE;
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #BBB; 
+    border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #AAA; 
+}
+
+body
+{
+  margin: auto;
+  font-family: $primary-font;
+  color: $text;
+  background: $background;
+}
+
+.content
+{
+	width: 80%;
+	margin: auto;
+}

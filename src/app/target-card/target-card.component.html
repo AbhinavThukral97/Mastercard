@@ -1,0 +1,4 @@
+<div class="target-card" (click)="clickCard()" [ngClass]="status ? 'selected' : 'notselected'">
+	<p><i class="{{mode.type}} fa-{{mode.icon}}"></i> {{mode.name}}</p>
+	<div class="check"><i class="fas fa-check-circle fa-lg"></i></div>
+</div>

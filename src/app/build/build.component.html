@@ -1,0 +1,26 @@
+<div class="content">
+	<h1 class="title">Build {{model}} Model</h1>
+	<form>
+		<div class="form-row">
+			<div class="param">Observation Period <i>(Months)</i></div>
+			<mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="auto" min="0" max="24" step="1" value="6"></mat-slider>
+		</div>
+		<div class="form-row">
+			<div class="param">Prediction Period <i>(Months)</i></div>
+			<mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="auto" min="0" max="6" step="1" value="3"></mat-slider>
+		</div>
+		<div class="form-row">
+			<div class="param">Region(s)</div>
+  			<select>
+  				<option *ngFor="let country of country_list">{{country}}</option>
+  			</select>
+		</div>
+		<div class="form-row">
+			<div class="param">Business Problem</div>
+  			<textarea placeholder="Type here"></textarea>
+		</div>
+	</form>
+	<div class="button-wrap">
+		<button [routerLink]="['../configure']" [queryParams]="{model:model}"><i class="fas fa-check-circle"></i> Done</button>
+	</div>
+</div>

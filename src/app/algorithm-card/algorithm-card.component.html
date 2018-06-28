@@ -1,0 +1,20 @@
+<div class="algorithm-card" (click)="clickCard()" [ngClass]="status ? 'selected' : 'notselected'">
+
+	<i class="icon fas fa-{{algo.icon}} fa-3x"></i>
+	<div class="algorithm-name">{{algo.name}}</div>
+
+	<button><i class="fas fa-check-circle"></i> Selected</button>
+	<div class="edit-icon" (click)="popup = true; status = false"><i class="fas fa-cog fa-lg"></i></div>
+</div>
+
+<div class="set-parameters" [style.transform]="openPopUp()">
+	<div class="close" (click)="popup = false"><i class="fas fa-times"></i></div>
+	<div class="title">Set parameters for <b>{{algo.name}}</b></div>
+	<div class="parameters">
+		<div class="parameter-item" *ngFor="let p of algo.params">
+			<div class="param">{{p.name}}</div>
+			<mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="auto" min="{{p.min}}" max="{{p.max}}" step="1" value="{{p.value}}"></mat-slider>
+		</div>
+	</div>
+	<div class="set" (click)="popup = false"><i class="far fa-check-circle"></i> Save</div>
+</div>

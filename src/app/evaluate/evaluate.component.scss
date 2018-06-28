@@ -1,0 +1,68 @@
+.content
+{
+	width: 80%;
+	padding: 50px 0px;
+	margin: auto;
+}
+
+.wrapper
+{
+	display: flex;
+	width: 80%;
+	margin: auto;
+	flex-wrap: wrap;
+}
+
+.evaluate-card
+{
+	padding: 20px;
+	width: 80%;
+	margin: 10px auto;
+	background: #FFF;
+	border-radius: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+
+	.model-details
+	{
+		width: 60%;
+		padding: 20px;
+
+		.model-title
+		{
+			font-size: 1em;
+			font-weight: 500;
+		}
+
+		p 
+		{
+			font-size: .8em;
+			font-weight: 400;
+		}
+	}
+
+	.status
+	{
+		font-size: .8em;
+		font-weight: 700;
+		width: 100px;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding: 10px 15px;
+		border-radius: 10px;
+		border: 2px solid rgba(0,0,0,.1);
+	}
+
+	.running
+	{
+		color: #27ae60;
+	}
+
+	.completed
+	{
+		color: #7f8c8d;
+	}
+}

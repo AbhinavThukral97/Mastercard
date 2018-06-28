@@ -1,0 +1,170 @@
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+
+.algorithm-card
+	{
+		position: relative;
+		width: 200px;
+		height: 180px;
+		padding-bottom: 50px;
+		background: #FFF;
+		border-radius: 15px;
+		margin: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		overflow: hidden;
+		cursor: pointer;
+		border: 2px solid transparent;
+		transition: .5s ease;
+
+		.icon 
+		{
+			color: #DDD;
+			margin-top: 60px;
+			width: 100%;
+			text-align: center;
+		}
+
+		.algorithm-name
+		{
+			width: 80%;
+			margin: 0;
+			text-align: center;
+			font-size: 1.2em;
+			font-weight: 400;
+		}
+
+		button 
+		{
+			position: absolute;
+			bottom: -50px;
+			width: 100%;
+			padding: 10px 0px;
+			border: none;
+			outline: none;
+			background: $primary-color;
+			color: #FFF;
+			font-weight: 400;
+			font-size: 1em;
+			transition: .4s ease;
+		}
+
+		.edit-icon
+		{
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			color: #AAA;
+			opacity: 0;
+			transition: .5s ease;
+		}
+
+		.edit-icon:hover
+		{
+			color: $primary-color;
+		}
+	}
+
+	.algorithm-card:hover
+	{
+		border: 2px solid $light-primary;
+	}
+
+	.algorithm-card:hover>.edit-icon
+	{
+		opacity: 1;
+	}
+
+	.selected
+	{
+		button 
+		{
+			bottom: 0px !important;
+		}
+	}
+
+	.set-parameters
+	{
+		position: fixed;
+		top: 25vh;
+		left: 25vw;
+		padding: 40px;
+		height: 50vh;
+		width: 50vw;
+		background: #FFF;
+		border-radius: 30px;
+		box-shadow: 0px 0px 40px rgba(0,0,0,.1);
+		z-index: 1000;
+		overflow: auto;
+		overflow-x: hidden;
+		transition: .5s ease;
+
+		.title 
+		{
+			font-size: 1.1em;
+			padding-bottom: 15px;
+			margin-bottom: 15px;
+			border-bottom: 1px solid rgba(0,0,0,.1);
+		}
+
+		.close
+		{
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			padding: 10px;
+			color: #AAA;
+			transition: .5s ease;
+			cursor: pointer;
+		}
+
+		.close:hover
+		{
+			color: $text;
+		}
+
+		.parameter-item
+		{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+
+			.param
+			{
+				width: 200px;
+				font-size: 1.1em;
+				font-weight: 400;
+				margin: 15px 0px;
+				margin-right: 20px;
+			}
+
+			mat-slider
+			{
+				width: 300px;
+			}
+		}
+
+		.set
+		{
+			margin-top: 20px;
+			width: 100%;
+			text-align: center;
+			font-size: 1.2em;
+			transition: .5s ease;
+			cursor: pointer;
+
+			.far 
+			{
+				margin-right: 5px;
+			}
+		}
+
+		.set:hover
+		{
+			color: $primary-color;
+		}
+	}

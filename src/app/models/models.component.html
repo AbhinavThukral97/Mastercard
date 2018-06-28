@@ -1,0 +1,10 @@
+<div class="models-wrapper">
+	<div class="content">
+		<div class="model-cards-wrapper">
+			<div *ngFor="let model of models" class="model-card" [routerLink]="['../build']" [queryParams]="{model:model.title}">
+				<i class="fas fa-{{model.icon}} fa-3x"></i>
+				<div class="model-title">{{model.title}}</div>
+			</div>
+		</div>
+	</div>
+</div>

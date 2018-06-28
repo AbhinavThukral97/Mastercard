@@ -1,0 +1,58 @@
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+.target-card
+{
+	position: relative;
+	padding: 5px 25px;
+	margin: 10px;
+	border-radius: 20px;
+	background: #FFF;
+	border: 2px solid transparent;
+	width: 150px;
+	text-align: center;
+	cursor: pointer;
+
+	p 
+	{
+		position: relative;
+		left: 0;
+		transition: .5s ease;
+	}
+
+	.fas,.far,.fab
+	{
+		margin-right: 5px;
+	}
+
+	.check
+	{
+		position: absolute;
+		top: 50%;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+		color: $primary-color;
+		transform: translate(0%,-50%);
+		opacity: 0;
+		transition: .5s ease;
+	}
+}
+
+.selected
+{
+	border: 2px solid $primary-color;
+
+	p 
+	{
+		position: relative;
+		left: 10px;
+	}
+
+	.check
+	{
+		opacity: 1;
+	}
+}

@@ -1,0 +1,72 @@
+$primary-font: 'Roboto', sans-serif;
+$primary-color: #ff3c53;
+$light-primary: #ff7686;
+$text: #4a5056;
+
+.login-wrapper
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 40px;
+	border-radius: 20px;
+	background: #FFF;
+
+	img 
+	{
+		height: 50px;
+		margin: 0px auto;
+		margin-bottom: 30px;
+	}
+
+	h1 
+	{
+		margin: 10px 10px;
+		font-size: 2.2em;
+		font-weight: 300;
+	}
+
+	input 
+	{
+		padding: 15px 20px;
+		border: 2px solid rgba(0,0,0,0.1);
+		border-radius: 10px;
+		background: none;
+		outline: none;
+		font-size: 1em;
+		margin: 5px;
+		width: 100%;
+		transition:.5s ease;
+	}
+
+	input:focus
+	{
+		border: 2px solid $primary-color;
+	}
+
+	button
+	{
+		padding: 15px 20px;
+		border-radius: 5px;
+		border: none;
+		background: $primary-color;
+		outline: none;
+		margin: 5px;
+		width: 100px;
+		color: #FFF;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: .75em;
+		cursor: pointer;
+		transition:.5s ease;
+	}
+
+	button:hover
+	{
+		background: $light-primary;
+	}
+}
